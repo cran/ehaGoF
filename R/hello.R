@@ -170,7 +170,7 @@ gofPC <- function (Obs, Prd, dgt=3){
 # 5. RMSE: Root Mean Square Error ----
 #' @export
 gofRMSE <- function (Obs, Prd, dgt=3){
-  RootMeanSquareError=round(mean((Obs - Prd)^2), digits = 3)
+  RootMeanSquareError=round(sqrt(mean((Obs - Prd)^2)), digits = dgt)
   return(RootMeanSquareError)
 }
 
